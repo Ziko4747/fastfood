@@ -20,7 +20,7 @@ public class ServerController {
         return "servers";
     }
 
-    @RequestMapping(value = "/saveserver", method = RequestMethod.POST)
+    @RequestMapping(value =" /saveserver", method = RequestMethod.POST)
     public String saveServer(@ModelAttribute Server server) {
         serverRepository.save(server);
         return "redirect:/servers";

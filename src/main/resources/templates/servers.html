@@ -28,8 +28,8 @@
                     <tbody>
 
                     <tr th:each="server : ${servers}">
-                        <td th:text="${server.fullName}"></td>
-                        <td th:text="${server.league}"></td>
+                        <td th:text="${server.Name}"></td>
+                        <td th:text="${server.price}"></td>
                     </tr>
                     </tbody>
                 </table>
@@ -37,12 +37,12 @@
         </div>
         <div class="form-row">
             <form class="needs-validation" novalidate action="#" th:action="@{/saveserver/}" th:object="${server}" method="post">
-                <label for="full_name">Название</label>
-                <input type="text" id="full_name" th:field="*{fullName}" class="form-control" required/>
+                <label for="name">Название</label>
+                <input type="text" id="name" th:field="*{Name}" class="form-control" required/>
                 <div class="invalid-feedback">Введите название фаст-фуда</div>
 
-                <label for="league">Цена</label>
-                <input type="text" id="league" th:field="*{league}" class="form-control" required/>
+                <label for="price">Цена</label>
+                <input type="text" id="price" th:field="*{price}" class="form-control" required/>
                 <div class="invalid-feedback">Введите цену</div>
                 <br/>
                 <button type="submit" class="btn btn-outline-success">Добавить</button>

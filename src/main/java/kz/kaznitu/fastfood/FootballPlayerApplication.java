@@ -21,12 +21,12 @@ public class FootballPlayerApplication implements CommandLineRunner {
 	public void run(String... strings) throws Exception{
 
 		Server server1 = new Server();
-		server1.setFullName("Бокс-мастер");
-		server1.setLeague(1600);
+		server1.setName("Бокс-мастер");
+		server1.setPrice(1600);
 
 		Server server2 = new Server();
-		server2.setFullName("Твистер");
-		server2.setLeague(1250);
+		server2.setName("Твистер");
+		server2.setPrice(1250);
 
 		clubRepository.save(server1);
 		clubRepository.save(server2);

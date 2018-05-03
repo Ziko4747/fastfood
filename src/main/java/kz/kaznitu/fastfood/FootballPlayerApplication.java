@@ -1,7 +1,7 @@
-package kz.kaznitu.footballplayer;
+package kz.kaznitu.fastfood;
 
-import kz.kaznitu.footballplayer.models.Club;
-import kz.kaznitu.footballplayer.repositories.ClubRepository;
+import kz.kaznitu.fastfood.models.Server;
+import kz.kaznitu.fastfood.repositories.ServerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FootballPlayerApplication implements CommandLineRunner {
 
 	@Autowired
-	ClubRepository clubRepository;
+	ServerRepository clubRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(FootballPlayerApplication.class, args);
@@ -20,15 +20,15 @@ public class FootballPlayerApplication implements CommandLineRunner {
 	@Override
 	public void run(String... strings) throws Exception{
 
-		Club club1 = new Club();
-		club1.setFullName("Manchester United");
-		club1.setLeague("Premier League");
+		Server server1 = new Server();
+		server1.setFullName("Бокс-мастер");
+		server1.setLeague(1600);
 
-		Club club2 = new Club();
-		club2.setFullName("Liverpool");
-		club2.setLeague("Premier League");
+		Server server2 = new Server();
+		server2.setFullName("Твистер");
+		server2.setLeague(1250);
 
-		clubRepository.save(club1);
-		clubRepository.save(club2);
+		clubRepository.save(server1);
+		clubRepository.save(server2);
 	}
 }

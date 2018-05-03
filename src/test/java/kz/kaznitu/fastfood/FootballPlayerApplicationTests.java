@@ -1,4 +1,4 @@
-package kz.kaznitu.footballplayer;
+package kz.kaznitu.fastfood;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
